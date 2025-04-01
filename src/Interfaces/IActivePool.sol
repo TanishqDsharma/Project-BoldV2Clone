@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.0; //@audit changing pragma
 
 
 interface IActivePool{
@@ -13,11 +13,11 @@ interface IActivePool{
     // returns address of the troveManager contract
     function troveManagerAddress() external view returns(address);
 
-    // 
+    // Returns an instance of the IBoldRewardsReceiver interface
     function interestRouter() external view returns(IInterestRouter);
 
-    // 
-    function stablityPool() external view returns(IBoldRewardsReceiver);
+    // Returns an instance of the IBoldRewardsReceiver interface
+    function stablityPool() external view returns(IBoldRewardsReceiver); //@audit typo for stablity pool
 
     // Balances and Debts
 
@@ -74,5 +74,5 @@ interface IActivePool{
     function sendColl(address _account, uint256 _amount) external; 
     function sendCollToDefaultPool(uint256 _amount) external;
     function receiveColl(uint256 _amount) external;
-    
+
 }
