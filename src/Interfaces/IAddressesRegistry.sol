@@ -2,6 +2,27 @@
 
 pragma solidity ^0.8.0;
 
+// SPDX-License-Identifier: MIT
+
+
+pragma solidity ^0.8.0;
+
+import "./IActivePool.sol";
+import "./IBoldToken.sol";
+import "./IBorrowerOperations.sol";
+import "./ICollSurplusPool.sol";
+import "./IDefaultPool.sol";
+import "./IHintHelpers.sol";
+import "./IMultiTroveGetter.sol";
+import "./ISortedTroves.sol";
+import "./IStabilityPool.sol";
+import "./ITroveManager.sol";
+import "./ITroveNFT.sol";
+import {IMetadataNFT} from "../NFTMetadata/MetadataNFT.sol";
+import "./ICollateralRegistry.sol";
+import "./IInterestRouter.sol";
+import "./IPriceFeed.sol";
+
 
 interface IAddressesRegistry{
 
@@ -52,7 +73,7 @@ interface IAddressesRegistry{
     function multiTroveGetter() external view returns(IMultiTroveGetter);
     function collateralRegistry() external view returns(ICollateralRegistry);
     function boldToken() external view returns(IBoldToken);
-    function weth() external view returns(IWETH);s
+    function weth() external view returns(IWETH);
 
 }
 
